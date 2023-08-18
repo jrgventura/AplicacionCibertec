@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "128572305833",
+    "project_id": "cibertec-app-d1978",
+    "storage_bucket": "cibertec-app-d1978.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128572305833:android:08182d0533d0768c7254b8",
+        "android_client_info": {
+          "package_name": "com.example.aplicacioncibertec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128572305833-qvk9u9vjnu639jlrl93d020uqc49jrmk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLY3RCgqGsubDnlu2dsljo0DXb_saMMPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128572305833-qvk9u9vjnu639jlrl93d020uqc49jrmk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
