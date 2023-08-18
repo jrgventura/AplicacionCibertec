@@ -1,9 +1,11 @@
 package com.example.aplicacioncibertec
 
 import android.app.Activity
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.aplicacioncibertec.network.LoginResponse
+import com.example.aplicacioncibertec.network.UsersResponse
 import com.google.firebase.auth.FirebaseAuth
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -64,6 +66,23 @@ class LoginViewModel: ViewModel() {
                         if(e is HttpException) {
                             val codeError = e.code() // 400 401 500 502 etc etc
                         }
+                    }
+                })
+        )
+    }
+
+    private fun listUserRetrofit(){
+        disposable.add(
+            repository.getUsers()
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object: DisposableSingleObserver<UsersResponse>(){
+                    override fun onSuccess(t: UsersResponse) {
+                        Log.v("USUARIOS", t.data.toString())
+                    }
+
+                    override fun onError(e: Throwable) {
+                        Log.v("ERROR", e.message.toString())
                     }
                 })
         )
