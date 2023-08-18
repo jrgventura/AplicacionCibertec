@@ -18,6 +18,8 @@ class LoginActivity: AppCompatActivity() {
         viewModel =
             ViewModelProvider(this)[LoginViewModel::class.java]
 
+        viewModel.listUserRetrofit()
+
         val edtCorreo =
             findViewById<TextInputEditText>(R.id.edtCorreo)
         val edtClave =

@@ -71,7 +71,7 @@ class LoginViewModel: ViewModel() {
         )
     }
 
-    private fun listUserRetrofit(){
+    fun listUserRetrofit(){
         disposable.add(
             repository.getUsers()
                 .subscribeOn(Schedulers.newThread())
