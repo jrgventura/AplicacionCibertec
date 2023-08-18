@@ -21,7 +21,8 @@ class LoginViewModel: ViewModel() {
     private val disposable = CompositeDisposable()
 
     fun login(email: String, pass: String) {
-        loginFirebase(email, pass)
+        // loginFirebase(email, pass)
+        loginRetrofit(email, pass)
     }
 
     private fun loginFirebase(email: String, pass: String) {
